@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --color-primary: #184269;
+  --color-secondary: #f4f4f4;
+  --clr-gray-light: #b0bec5;
+}
+
+body {
+  background: var(--color-secondary, white);
+  margin: 1rem;
+}
+
+/* your styles here */
+
+.cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 21rem;
+  margin-bottom: 1rem;
+  margin-right: 0.5rem;
+  flex-direction: column;
+}
+.bg-image {
+  position: relative;
+  height: 45%;
+}
+
+.bg-image img {
+  max-width: 100%;
+}
+.date {
+  position: absolute;
+  max-width: 106px;
+  font-size: 14px;
+  font-weight: 700;
+  bottom: 57px;
+  left: 50px;
+  background-color: #fff;
+  padding: 5px 18px 5px 18px;
+  border-radius: 3px;
+}
+.card-body {
+  padding: 2rem;
+}
+.card-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 23px;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+}
+
+.btn {
+  padding: 12px 78px 12px 18px;
+  color: #fff;
+  background: #184269;
+  border-radius: 4px;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.5s;
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.btn:after {
+  content: '\00bb';
+  position: absolute;
+  font-size: 20px;
+  opacity: 0;
+  top: 10px;
+  right: 5px;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  padding-left: 1.5rem;
+}
+
+.btn:hover:after {
+  opacity: 1;
+  right: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .cards-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .card {
+    max-width: 350px;
+  }
+  .bg-image img {
+    max-width: 350px;
+  }
+  .card-body {
+    padding: 1.4rem;
+  }
+}
+@media only screen and (min-width: 1008px) {
+  .cards-wrapper {
+    flex-direction: row;
+  }
+  .card {
+    display: flex;
+    flex-direction: row;
+    max-width: 700px;
+    padding: 0;
+    height: 324px;
+  }
+
+  .bg-image img {
+    height: 324px;
+  }
+  .date {
+    bottom: 106px;
+    left: 216px;
+    background-color: #fff;
+    padding: 5px 18px 5px 18px;
+    border-radius: 3px;
+  }
+}
